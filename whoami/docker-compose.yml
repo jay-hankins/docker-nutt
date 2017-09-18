@@ -6,10 +6,10 @@ services:
     networks:
       - web
     labels:
-      - "traefik.backend=whoami"
-      - "traefik.frontend.rule=Host:nutt.men;PathPrefix:/whoami"
+      - "traefik.backend = whoami"
+      - "traefik.frontend.rule = Host:nutt.men;PathPrefix:/whoami"
       - "traefik.port = 80"
-      - "traefik.docker.network=web"
+      - "traefik.docker.network = web"
     restart:
       always
 
