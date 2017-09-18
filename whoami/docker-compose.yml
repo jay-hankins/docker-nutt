@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  whoami:
+    image: solidnerd/arm-whoami
+    networks:
+      - web
+    labels:
+      - "traefik.backend=whoami"
+      - "traefik.frontend.rule=Host:nutt.men;PathPrefix:/whoami"
+      - "traefik.port = 80"
+      - "traefik.docker.network=web"
+    restart:
+      always
+
+networks:
+  web:
+    external: true

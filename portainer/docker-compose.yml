@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  portainer:
+    image: portainer/portainer
+    networks:
+      - web
+    labels:
+      - "traefik.backend=portainer"
+      - "traefik.frontend.rule=Host:portainer.nutt.men"
+      - "traefik.port = 9000"
+      - "traefik.docker.network=web"
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/portainer/data:/data
+    ports:
+      - 9000:9000
+
+networks:
+  web:
+    external: true
