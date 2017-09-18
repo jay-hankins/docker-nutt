@@ -7,7 +7,7 @@ services:
       - web
     labels:
       - "traefik.backend = whoami"
-      - "traefik.frontend.rule = Host:nutt.men;PathPrefix:/whoami"
+      - "traefik.frontend.rule = Host:nutt.men,docker1.nutt.local;PathPrefix:/whoami"
       - "traefik.port = 80"
       - "traefik.docker.network = web"
     restart: always
