@@ -7,7 +7,7 @@ services:
       - web
     labels:
       - "traefik.backend=portainer"
-      - "traefik.frontend.rule=Host:docker1.nutt.local;PathPrefix:/portainer"
+      - "traefik.frontend.rule=Host:docker1.nutt.local;PathPrefixStrip:/portainer"
       - "traefik.port=9000"
       - "traefik.docker.network=web"
     volumes:
