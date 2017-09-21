@@ -1,0 +1,3 @@
+[submodule "docker-plex-armhf"]
+	path = docker-plex-armhf
+	url = git@github.com:jay-hankins/docker-plex-armhf.git
