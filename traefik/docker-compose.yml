@@ -3,6 +3,7 @@ version: '2'
 services:
   traefik:
     image: traefik
+    command: --web --docker --docker.domain=nutt.men --logLevel=DEBUG
     restart: always
     networks:
       - web
