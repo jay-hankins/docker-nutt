@@ -1,3 +1,6 @@
 [submodule "dpi-openvpn"]
-    path = dpi-openvpn
-    url = git@github.com:jay-hankins/dpi-openvpn.git
+	path = dpi-openvpn
+	url = git@github.com:jay-hankins/dpi-openvpn.git
+[submodule "dpi-plex"]
+	path = dpi-plex
+	url = git@github.com:jay-hankins/dpi-plex.git
