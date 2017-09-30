@@ -1,6 +1,6 @@
 # OpenVPN for pi
 
-FROM armv7/armhf-debian:jessie
+FROM armv7/armhf-debian:stretch
 LABEL maintainer="Jay Hankins <jay@jayhankins.me>"
 
 VOLUME /home-vpn-user
