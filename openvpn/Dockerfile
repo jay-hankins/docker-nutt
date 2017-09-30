@@ -14,7 +14,7 @@ RUN apt-get update \
     && usermod -G users vpn-user
 
 # Add configuration and scripts
-ADD openvpn/ /etc/openvpn/
+ADD app/ /etc/openvpn/
 
 # Expose port and run
 EXPOSE 9091
