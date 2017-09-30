@@ -7,10 +7,7 @@ VOLUME /home-vpn-user
 
 # Update packages and install software
 RUN apt-get update \
-    && apt-get install -y transmission-cli transmission-common transmission-daemon openvpn wget\
-    && wget https://archive.raspbian.org/raspbian/pool/main/d/dumb-init/dumb-init_1.2.0-1_armhf.deb \
-    && dpkg -i dumb-init_*.deb \
-    && rm -rf dumb-init_*.deb \
+    && apt-get install -y transmission-cli transmission-common transmission-daemon openvpn wget dumb-init\
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && groupmod -g 1000 users \
     && useradd -u 911 -U -d /home-vpn-user -s /bin/false vpn-user \
